@@ -7,6 +7,7 @@ import { Auth } from 'aws-amplify';
 import awsmobile from './aws-exports';
 import { Authenticator, Button, Heading, Image, Text, useAuthenticator, useTheme, View } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
+
 Auth.configure(awsmobile);
 
 // Custom Confirm Sign Up footer with a Footer Information message
@@ -247,12 +248,27 @@ const formFields = {
     },
   },
 };
+const SignOutHtml = () => {
+  const { signOut, user } = useAuthenticator();
 
+  return (
+    <Fragment>
+      <h4>Hello {user.username}</h4>
+      <Button
+        fontWeight="normal"
+        size="small"
+        onClick={signOut}
+        variation="link"
+        >
+        Sign Out
+      </Button>
+    </Fragment>
+  )
+}
 function App() {
 
   const [tasks, setTasks] = useState([])
   const [dark, setDark] = useState(true);
-  
   useEffect(() => {
     let myTodo = localStorage.getItem('myTodoTasks');
     if (myTodo) {
@@ -264,14 +280,22 @@ function App() {
     <Authenticator formFields={formFields} components={components}>
       <div className={`${dark ? 'darkMode-App' : "lightMode-App"} App`}>
         <div className={`${dark ? 'darkMode-app-title-container' : "lightMode-app-title-container"} app-title-container`}>
-          <h1 className='app-title'>Manage TODO</h1>
+          <div className='flex-container'>
+            <div className='flex-child authentication-left-sidenav'>
+              <h1 className='app-title'>Manage TODO</h1>
+            </div>
+            <div className='flex-child authentication-mid-sidenav'>
+              <Switch
+                checked={dark}
+                onChange={() => setDark(!dark)}
+                uncheckedIcon={<div className='check-sun-btn' ><BsSunFill size={18} /></div>}
+                checkedIcon={<div className='check-moon-btn'><BsFillMoonStarsFill size={18} /></div>} />
+            </div>
+            <div className='flex-child authentication-right-sidenav'>
+              <SignOutHtml />
+            </div>
+          </div>
         </div>
-        <Switch
-          checked={dark}
-          onChange={() => setDark(!dark)}
-          uncheckedIcon={<div className='check-sun-btn' ><BsSunFill size={18} /></div>}
-          checkedIcon={<div className='check-moon-btn'><BsFillMoonStarsFill size={18} /></div>} />
-
         <TaskContainer tasks={tasks} setTasks={setTasks} dark={dark} />
       </div >
     </Authenticator>

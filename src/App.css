@@ -74,3 +74,21 @@
   padding-top: 4.5px;
   padding-left: 6px;
 }
+.flex-container {
+  display: flex;
+  width: 100%;
+}
+.flex-child {
+  margin: 2px;
+  border-radius: 3px;
+}  
+.authentication-right-sidenav {
+  width: 10%;
+}
+.authentication-mid-sidenav {
+  width: 5%;
+  justify-content: center;
+}
+.authentication-left-sidenav {
+  width: 100%;
+}
