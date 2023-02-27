@@ -9,5 +9,5 @@ Open AWS Hosting [https://dev.d3470g6x9l99d4.amplifyapp.com/](https://dev.d3470g
     - auth
 - S3
     - storage
-- Coginito
+- Cognito
     - Authentication(Identity Provider)
