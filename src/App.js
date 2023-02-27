@@ -19,7 +19,7 @@ const components = {
       <View textAlign="center" padding={tokens.space.large}>
         <Image
           alt="Amplify logo"
-          src="https://docs.amplify.aws/assets/logo-dark.svg"
+          src="https://images.squarespace-cdn.com/content/v1/61ede7ceb696227cef7b366a/d05942ab-1741-489b-8de9-240c7bba2003/TodoBannerLogo.png"
         />
       </View>
     );
