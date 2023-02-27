@@ -9,13 +9,26 @@
       "UnauthRoleName": "amplify-todomanager-dev-122333-unauthRole",
       "StackName": "amplify-todomanager-dev-122333",
       "StackId": "arn:aws:cloudformation:us-east-1:776848419154:stack/amplify-todomanager-dev-122333/7657e0e0-b66b-11ed-89b3-0a2e8f0d64a3",
-      "AmplifyAppId": "d3470g6x9l99d4"
+      "AmplifyAppId": "d3470g6x9l99d4",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-todomanager-dev-122333-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
     },
     "categories": {
       "hosting": {
         "amplifyhosting": {
           "appId": "d3470g6x9l99d4",
           "type": "manual"
+        }
+      },
+      "auth": {
+        "todomanager414059f5": {}
+      },
+      "function": {
+        "todomanager414059f5CustomMessage": {
+          "REDIRECTURL": "https://dev.d3470g6x9l99d4.amplifyapp.com/",
+          "EMAILSUBJECT": "Confirmation Email",
+          "EMAILMESSAGE": "Confirm Your Email",
+          "deploymentBucketName": "amplify-todomanager-dev-122333-deployment",
+          "s3Key": "amplify-builds/todomanager414059f5CustomMessage-4c37476e4f76684c436a-build.zip"
         }
       }
     }

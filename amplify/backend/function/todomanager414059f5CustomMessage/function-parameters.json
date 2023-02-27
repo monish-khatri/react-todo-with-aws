@@ -1,0 +1,26 @@
+{
+  "trigger": true,
+  "modules": [
+    "verification-link"
+  ],
+  "parentResource": "todomanager414059f5",
+  "functionName": "todomanager414059f5CustomMessage",
+  "resourceName": "todomanager414059f5CustomMessage",
+  "parentStack": "auth",
+  "triggerEnvs": [
+    {
+      "key": "RESOURCENAME",
+      "value": "resourceName"
+    }
+  ],
+  "triggerDir": "C:\\snapshot\\repo\\build\\node_modules\\@aws-amplify\\amplify-category-auth\\provider-utils\\awscloudformation\\triggers\\CustomMessage",
+  "triggerTemplate": "CustomMessage.json.ejs",
+  "triggerEventPath": "CustomMessage.event.json",
+  "roleName": "todomanager414059f5CustomMessage",
+  "skipEdit": true,
+  "REDIRECTURL": "https://dev.d3470g6x9l99d4.amplifyapp.com/",
+  "EMAILSUBJECT": "Confirmation Email",
+  "EMAILMESSAGE": "Confirm Your Email",
+  "RESOURCENAME": "resourceName",
+  "enableCors": false
+}
